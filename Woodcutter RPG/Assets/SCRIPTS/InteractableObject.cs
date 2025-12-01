@@ -11,7 +11,14 @@ public class InteractableObject : MonoBehaviour
     {
         return ItemName;
     }
-
+    void Update()
+    {
+     if (Input.GetKeyDown(KeyCode.Mouse0) && playerInRange && SelectionManager.instance.onTarget)
+        {
+            Debug.Log("Interacted with " + ItemName);
+            Destroy(gameObject);
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
