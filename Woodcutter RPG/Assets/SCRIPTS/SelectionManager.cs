@@ -32,9 +32,13 @@ public class SelectionManager : MonoBehaviour
             else 
             { 
                 interaction_Info_UI.SetActive(false);
+            }}
+        else 
+            { 
+                interaction_Info_UI.SetActive(false);
             }
- 
-        }
+
+        
     }
 
 }
